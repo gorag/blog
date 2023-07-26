@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block main %}
-  <!--================ Hero sm Banner start =================-->      
+  <!--================ Hero sm Banner start =================-->
   <section class="mb-30px">
     <div class="container">
       <div class="hero-banner hero-banner--sm">
@@ -15,7 +15,7 @@
           <h1>Blog details</h1>
           <nav aria-label="breadcrumb" class="banner-breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
               <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
             </ol>
           </nav>
@@ -23,8 +23,8 @@
       </div>
     </div>
   </section>
-  <!--================ Hero sm Banner end =================-->    
-  
+  <!--================ Hero sm Banner end =================-->
+
 
   <!--================ Start Blog Post Area =================-->
   <section class="blog-post-area section-margin">
@@ -33,7 +33,7 @@
         <div class="col-lg-8">
           <div class="main_blog_details">
             {% if post.image_url %}
-              <img class="img-fluid" src="{{ post.image_url }}" alt="">
+              <img class="img-fluid" src="{{ post.image_url }}" alt="Post">
             {% else %}
               <img class="img-fluid" src="{% static '/img/banner/blog.png' %}" alt="Blog">
             {% endif %}
@@ -60,7 +60,7 @@
               </div>
             </div>
           </div>
-          
+
 
           <div class="comments-area">
             <h4>{{ post.comments|length }} Comments</h4>
@@ -77,11 +77,11 @@
                     </div>
                   </div>
                   <div class="reply-btn">
-                          <a href="" class="btn-reply text-uppercase">reply</a> 
+                          <a href="" class="btn-reply text-uppercase">reply</a>
                   </div>
                 </div>
               </div>
-            {% endfor %}	                                             				
+            {% endfor %}
           </div>
         </div>
 
